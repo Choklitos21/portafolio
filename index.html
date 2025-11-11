@@ -5,38 +5,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Diego Portafolio</title>
 </head>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+<style>
+    /* Setting the global font style */
+    html {
+        font-family: "Outfit", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 200;
+        font-style: normal;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th {
+        font-size: larger;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+
+    table, th, td {
+        border: 1px solid black;
+    }
+
+    td:nth-child(n+2) {
+        text-align: center;
+        width: 15%;
+    }
+
+    a {
+        color: deepskyblue;
+        font-style: italic;
+    }
+
+    .name-title{
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .description{
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .profile-picture{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 150px;
+        border-radius: 50%;
+    }
+
+</style>
+
 <body>
 
-    <h1>Diego Morales Montoya</h1>
-    <hr>
-    <h2>Me gusta dormir</h2>
-    <hr>
-    <table>
-    <tr>
-        <th>Actividad</th>
-        <th>Enlace</th>
-        <th>Modulo</th>
-    </tr>
-    <tr>
-        <td>10 python activities</td>
-        <td><a href="https://github.com/Choklitos21/Exercises-W1-LvL1">Link</a></td>
-        <td>#1</td>
-    </tr>
-    <tr>
-        <td>Delivery</td>
-        <td><a href="https://github.com/Choklitos21/Riwi-Domicilios-W1">Link</a></td>
-        <td>#1</td>
-    </tr>
-    <tr>
-        <td>Rent a bike</td>
-        <td><a href="https://github.com/Choklitos21/Turing-DiegoMorales">Link</a></td>
-        <td>#1</td>
-    </tr>
-    <tr>
-        <td>User history / Moodle</td>
-        <td><a href="https://github.com/Choklitos21/Riwi-W1-NOV4-7">Link</a></td>
-        <td>#1</td>
-    </tr>
+    <div>
+        <div>
+            <div>
+                <img class="profile-picture" src="./pictures/Imagen%20de%20WhatsApp%202025-11-11%20a%20las%2010.59.34_ac8c571c.jpg">
+            </div>
+            <div>
+                <!-- Header with name and subtitle -->
+                <h1 class="name-title">Diego Morales Montoya</h1>
+                <hr>
+                <h2 class="description">I like sleeping</h2>
+                <hr>
+            </div>
+        </div>
+
+        <!-- Table of activities with links and modules -->
+        <table>
+            <tr>
+                <th>Activity</th>
+                <th>Link</th>
+                <th>Module</th>
+            </tr>
+            <tr>
+                <td>10 python activities</td>
+                <td><a href="https://github.com/Choklitos21/Exercises-W1-LvL1">Link</a></td>
+                <td>#1</td>
+            </tr>
+            <tr>
+                <td>Delivery</td>
+                <td><a href="https://github.com/Choklitos21/Riwi-Domicilios-W1">Link</a></td>
+                <td>#1</td>
+            </tr>
+            <tr>
+                <td>Rent a bike</td>
+                <td><a href="https://github.com/Choklitos21/Turing-DiegoMorales">Link</a></td>
+                <td>#1</td>
+            </tr>
+            <tr>
+                <td>User history / Moodle</td>
+                <td><a href="https://github.com/Choklitos21/Riwi-W1-NOV4-7">Link</a></td>
+                <td>#1</td>
+            </tr>
+        </table>
+    </div>
 
 </table>
 
