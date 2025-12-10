@@ -16,26 +16,30 @@ html {
 
     color: white;
     background-color: var(--pursian-blue);
-    overflow-x: hidden;
 }
 
 body {
     width: 100%;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
 .card {
     background-color: var(--navy);
     border-radius: 15px;
     border: 5px solid rgb(13, 0, 164);
-    padding: 30px;
-    margin-top: 30px;
+    padding: 10px 30px 30px 30px;
+    margin-top: 15px;
     width: 60%;
     height: 60%;
     transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:first-child {
+    padding: 30px;
 }
 
 .card:hover {
@@ -63,6 +67,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 50px;
 }
 
 .projects-container a {
@@ -76,25 +81,32 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 0;
 }
 
-.projects-container div:first-child {
+.projects-container .buttons-container {
     width: 90%;
     height: auto;
     border: 1px solid black;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     border-bottom: unset;
-    padding: 10px;
+
+    display: flex;
+    flex-direction: row;
+    background-color: var(--pursian-blue);
+    cursor: pointer;
+    padding: 0 !important;
+    overflow: hidden;
 }
 
-.projects-container div:last-child {
+.projects-container .table-container {
     width: 90%;
     height: auto;
     border: 1px solid black;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    padding: 10px;
+    padding: 0;
 }
 
 .projects-container table {
@@ -113,36 +125,63 @@ body {
 .projects-container table th {
     width: 100%;
     height: auto;
+    margin: 8px 0;
 }
 
-.projects-container table tr:first-child {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+.projects-container table tr{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 
-.projects-container table tbody > tr:not(:first-child)  {
+.projects-container table tr td{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    text-align: left;
 }
 
-.projects-container .buttons-container {
-    width: 100%;
-    height: auto;
+.projects-container table tr td:first-child {
+    justify-content: start;
+    margin-left: 20px;
+}
+
+.projects-container table tr td a {
     display: flex;
     flex-direction: row;
-    margin: 0;
-    padding: 0;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
 }
 
-.buttons-container button {
-    margin: 0;
-    padding: 0;
-    width: 100%;
+.projects-container table tr td a img{
+    filter: invert(1);
+}
+
+.projects-container table tr td:nth-child(2){
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects-container table tr td img {
+    width: 15%;
     height: auto;
+}
+
+.projects-container .buttons-container div {
+    width: 100%;
+    height: 100%;
+    padding: 10px 0;
+    border: unset;
+    border-radius: unset;
+}
+
+.projects-container .buttons-container div:hover {
+    background-color: var(--navy-electrical);
+}
+
+#module2 {
+    display: none;
 }
