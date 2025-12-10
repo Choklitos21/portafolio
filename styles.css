@@ -1,0 +1,148 @@
+/* Setting the global font style */
+:root {
+    --black: #02010A;
+    --pursian-blue: #04052E;
+    --deep-twitlight: #140152;
+    --navy: #22007C;
+    --navy-electrical: #0D00A4;
+}
+
+html {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 1.2rem;
+
+    color: white;
+    background-color: var(--pursian-blue);
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+    background-color: var(--navy);
+    border-radius: 15px;
+    border: 5px solid rgb(13, 0, 164);
+    padding: 30px;
+    margin-top: 30px;
+    width: 60%;
+    height: 60%;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 0 0 16px rgb(13, 0, 164);
+}
+
+.header-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.header-info img {
+    width: 30%;
+    height: auto;
+    object-fit: cover;
+
+    border: 15px solid var(--deep-twitlight);
+    border-radius: 50%;
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects-container a {
+    text-decoration: unset;
+    color: white;
+}
+
+.projects-container div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.projects-container div:first-child {
+    width: 90%;
+    height: auto;
+    border: 1px solid black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: unset;
+    padding: 10px;
+}
+
+.projects-container div:last-child {
+    width: 90%;
+    height: auto;
+    border: 1px solid black;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 10px;
+}
+
+.projects-container table {
+    width: 100%;
+    height: auto;
+}
+
+.projects-container table tbody {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects-container table tr,
+.projects-container table th {
+    width: 100%;
+    height: auto;
+}
+
+.projects-container table tr:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.projects-container table tbody > tr:not(:first-child)  {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.projects-container .buttons-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+}
+
+.buttons-container button {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+}

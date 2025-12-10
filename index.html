@@ -4,145 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Diego Portafolio</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="media/pictures/pokeball.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="styles.css">
+
 </head>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-
-<style>
-    /* Setting the global font style */
-    html {
-        font-family: "Outfit", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 200;
-        font-style: normal;
-    }
-
-    table {
-        justify-content: center;
-        justify-items: center;
-        width: 80%;
-        border-collapse: collapse;
-    }
-
-    th {
-        font-size: larger;
-    }
-
-    th, td {
-        padding: 10px;
-    }
-
-    table, th, td {
-        border: 1px solid black;
-    }
-
-    td:nth-child(n+2) {
-        text-align: center;
-        width: 15%;
-    }
-
-    a {
-        color: deepskyblue;
-        font-style: italic;
-    }
-
-    .name-title{
-        text-align: center;
-        margin-bottom: 30px;
-    }
-
-    .description{
-        text-align: center;
-        margin-bottom: 30px;
-    }
-
-    .profile-picture{
-        display: block;
-        margin-top: 30px;
-        margin-left: auto;
-        margin-right: auto;
-        width: 150px;
-        border-radius: 50%;
-    }
-
-</style>
-
 <body>
+    <div class="header-info card">
+        <img class="profile-picture"
+             src="media/pictures/Imagen%20de%20WhatsApp%202025-11-11%20a%20las%2010.59.34_ac8c571c.jpg"
+             alt="Profile Picture">
+        <!-- Header with name and subtitle -->
+        <h1 class="name-title">Diego Alejandro<br>Morales Montoya</h1>
+    </div>
 
-    <div>
-        <div>
-            <div>
-                <img class="profile-picture" src="./pictures/Imagen%20de%20WhatsApp%202025-11-11%20a%20las%2010.59.34_ac8c571c.jpg">
-            </div>
-            <div>
-                <!-- Header with name and subtitle -->
-                <h1 class="name-title">Diego Alejandro<br>MoralesMontoya</h1>
-                <hr>
-                <h2 class="description">I like sleeping</h2>
-                <hr>
-            </div>
+    <br>
+    <div class="card about-me">
+        <h2>About me</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda atque doloribus explicabo laudantium,
+            magnam omnis optio quia ratione reprehenderit? A dolor esse iste itaque labore maxime numquam officia rem
+            voluptatem.
+        </p>
+    </div>
+    <br>
+
+    <div class="card projects-container">
+        <div class="buttons-container">
+            <button type="button">Module 1</button>
+            <button type="button">Module 2</button>
         </div>
-
-        <!-- Table of activities with links and modules -->
-        <table>
-            <tr>
-                <th>Activity</th>
-                <th>Link</th>
-                <th>Module</th>
-            </tr>
-            <tr>
-                <td>10 python activities</td>
-                <td><a href="https://github.com/Choklitos21/Exercises-W1-LvL1" target="_blank">Link</a></td>
-                <td>#1</td>
-            </tr>
-            <tr>
-                <td>Delivery</td>
-                <td><a href="https://github.com/Choklitos21/Riwi-Domicilios-W1" target="_blank">Link</a></td>
-                <td>#1</td>
-            </tr>
-            <tr>
-                <td>Rent a bike</td>
-                <td><a href="https://github.com/Zain-wave/pytoninicial/blob/main/Grupales/GreenCity.py" target="_blank">Link</a></td>
-                <td>#1</td>
-            </tr>
-            <tr>
-                <td>User history / Moodle</td>
-                <td><a href="https://github.com/Choklitos21/Riwi-W1-NOV4-7" target="_blank">Link</a></td>
-                <td>#1</td>
-            </tr>
-            <tr>
-                <td>CrudActivity - CrudData — Estructuras de Datos en Python</td>
-                <td><a href="https://github.com/Choklitos21/CrudActivity-CrudData" target="_blank">Link</a></td>
-                <td>#1</td>
-            </tr>
-            <tr>
-                <td>RIWI-W2-Decisions-and-cycles</td>
-                <td><a href="https://github.com/Choklitos21/RIWI-W2-Decisions-and-cycles/tree/main" target="_blank">Link</a></td>
-                <td>#1</td>
-            </tr>
-            <tr>
-                <td>CrudActivity-CrudzasoGames-TeamAmericano</td>
-                <td><a href="https://github.com/Choklitos21/CrudActivity-CrudzasoGames-TeamAmericano" target="_blank">Link</a></td>
-                <td>#1</td>
-            </tr>
-            <tr>
-                <td>CrudActivity-Worldhub</td>
-                <td><a href="https://github.com/Choklitos21/WorldHub-AtlasCrudzaso-Wish" target="_blank">Link</a></td>
-                <td>#2</td>
-            </tr>
-            <tr>
-                <td>CrudActivity-MediaPanel</td>
-                <td><a href="https://github.com/Choklitos21/CrudActivity-MediaPanel" target="_blank">Link</a></td>
-                <td>#2</td>
-            </tr>
-            <tr>
-                <td>CrudActivity-Mini-OS</td>
-                <td><a href="https://github.com/Choklitos21/CrudActivity---Mini-OS" target="_blank">Link</a></td>
-                <td>#2</td>
-            </tr>
-        </table>
+        <div>
+            <table>
+                <tr>
+                    <th><h2>Projects</h2></th>
+                </tr>
+                <tr>
+                    <td>User history / Moodle</td>
+                    <td><img src="media/icons/python.svg" alt="Python"></td>
+                    <td><a href="https://github.com/Choklitos21/Riwi-W1-NOV4-7" target="_blank">Repository</a></td>
+                </tr>
+                <tr>
+                    <td>User history / Moodle</td>
+                    <td><img src="media/icons/python.svg" alt="Python"></td>
+                    <td><a href="https://github.com/Choklitos21/Riwi-W1-NOV4-7" target="_blank">Repository</a></td>
+                </tr>
+                <tr>
+                    <td>User history / Moodle</td>
+                    <td><img src="media/icons/python.svg" alt="Python"></td>
+                    <td><a href="https://github.com/Choklitos21/Riwi-W1-NOV4-7" target="_blank">Repository</a></td>
+                </tr>
+            </table>
+        </div>
     </div>
 
 </body>
