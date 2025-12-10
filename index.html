@@ -19,9 +19,12 @@
 
 <body>
     <div class="header-info card">
-        <img class="profile-picture"
-            src="media/pictures/Imagen%20de%20WhatsApp%202025-11-11%20a%20las%2010.59.34_ac8c571c.jpg"
-            alt="Profile">
+        <div class="box-animada" >
+
+            <img class="profile-picture"
+                src="media/pictures/Imagen%20de%20WhatsApp%202025-11-11%20a%20las%2010.59.34_ac8c571c.jpg"
+                alt="Profile">
+        </div>
         <!-- Header with name and subtitle -->
         <h1 class="name-title">Diego Alejandro<br>Morales Montoya</h1>
     </div>
@@ -30,9 +33,10 @@
     <div class="card about-me">
         <h2>About me</h2>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda atque doloribus explicabo laudantium,
-            magnam omnis optio quia ratione reprehenderit? A dolor esse iste itaque labore maxime numquam officia rem
-            voluptatem.
+            Software development student for Riwi
+            Passionate about coding, problem-solving, and creating efficient code
+            I enjoy discovering new ways to program and create applications, and I am passionate about music, coffee, and cats
+            Always willing to help and make new friends
         </p>
     </div>
     <br>
@@ -40,15 +44,15 @@
     <div class="card projects-container">
         <h1>Projects</h1>
         <div class="buttons-container">
-            <div>
+            <div id="button1" class="active">
                 <span>Module 1</span>
             </div>
-            <div>
+            <div id="button2">
                 <span>Module 2</span>
             </div>
         </div>
         <div class="table-container">
-            <table id="module1">
+            <table class="module1" id="module1">
                 <tr>
                     <th>Name</th>
                     <th>Technology</th>
@@ -147,7 +151,7 @@
                 </tr>
             </table>
 
-            <table id="module2">
+            <table class="module2" id="module2">
                 <tr>
                     <th>Name</th>
                     <th>Technology</th>
@@ -200,7 +204,6 @@
             </table>
         </div>
     </div>
-
 
     <script src="scripts.js"></script>
 </body>

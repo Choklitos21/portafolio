@@ -54,12 +54,54 @@ body {
 }
 
 .header-info img {
-    width: 30%;
+    width: 90%;
     height: auto;
     object-fit: cover;
-
-    border: 15px solid var(--deep-twitlight);
     border-radius: 50%;
+    z-index: 10;
+}
+
+.box-animada {
+    position: relative;
+    width: 250px;  /* Ajusta al tamaño deseado */
+    height: 250px; /* Ajusta al tamaño deseado */
+    background: black; /* Color de fondo por si la imagen falla */
+    border-radius: 50%; /* Hace que sea un círculo. Quítalo para un cuadrado */
+    overflow: hidden; /* Asegura que nada se salga del círculo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-animada::before {
+    content: '';
+    position: absolute;
+    width: 150%; /* Debe ser más grande que el contenedor para cubrir al girar */
+    height: 150%;
+    /* Aquí definimos los colores. Importante: El último color debe ser igual al primero */
+    background: conic-gradient(
+            #F08700,
+            #F49F0A,
+            #EFCA08,
+            #00A6A6,
+            #BBDEF0,
+            #F08700
+    );
+    /* La animación que hace girar este fondo */
+    animation: girar 3s linear infinite;
+}
+
+@keyframes girar {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.about-me {
+    line-height: 1.8;
 }
 
 .projects-container {
@@ -112,6 +154,7 @@ body {
 .projects-container table {
     width: 100%;
     height: auto;
+    font-size: 0.9rem;
 }
 
 .projects-container table tbody {
@@ -125,12 +168,17 @@ body {
 .projects-container table th {
     width: 100%;
     height: auto;
-    margin: 8px 0;
+    padding: 8px 0;
 }
 
 .projects-container table tr{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    border-bottom: 1px solid black;
+}
+
+.projects-container table tr:last-child{
+    border-bottom: unset;
 }
 
 .projects-container table tr td{
@@ -158,6 +206,10 @@ body {
     filter: invert(1);
 }
 
+.projects-container table tr td a:hover{
+    filter: invert(9%) sepia(99%) saturate(7044%) hue-rotate(263deg) brightness(95%) contrast(143%);
+}
+
 .projects-container table tr td:nth-child(2){
     display: flex;
     flex-direction: row;
@@ -176,12 +228,21 @@ body {
     padding: 10px 0;
     border: unset;
     border-radius: unset;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .projects-container .buttons-container div:hover {
     background-color: var(--navy-electrical);
 }
 
-#module2 {
+.projects-container .module1 {
+    display: block;
+}
+
+.active {
+    background-color: var(--navy-electrical);
+}
+
+.module2 {
     display: none;
 }
