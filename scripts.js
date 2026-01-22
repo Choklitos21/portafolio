@@ -4,21 +4,25 @@ const moduleOneTable = document.getElementById('module1')
 const moduleTwoButton = document.getElementById('button2')
 const moduleTwoTable = document.getElementById('module2')
 
-
-console.log(moduleOneButton);
-console.log(moduleTwoButton);
-
-console.log(moduleOneTable);
-console.log(moduleTwoTable);
+const moduleThreeButton = document.getElementById('button3')
+const moduleThreeTable = document.getElementById('module3')
 
 
 moduleOneButton.addEventListener('click', () => {
     if (moduleOneTable.style.display !== 'block') {
         moduleOneTable.style.display = 'block';
         moduleTwoTable.style.display = 'none';
+        moduleThreeTable.style.display = 'none';
+
+        if (moduleThreeButton.classList.contains('active')) {
+            moduleThreeButton.classList.remove('active');
+        }
+
+        if (moduleTwoButton.classList.contains('active')) {
+            moduleTwoButton.classList.remove('active');
+        }
 
         moduleOneButton.classList.add('active');
-        moduleTwoButton.classList.remove('active');
     }
 });
 
@@ -26,9 +30,35 @@ moduleTwoButton.addEventListener('click', () => {
     if (moduleTwoTable.style.display !== 'block') {
         moduleTwoTable.style.display = 'block';
         moduleOneTable.style.display = 'none';
+        moduleThreeTable.style.display = 'none';
 
-        moduleOneButton.classList.remove('active');
+        if (moduleOneButton.classList.contains('active')) {
+            moduleOneButton.classList.remove('active');
+        }
+
+        if (moduleThreeButton.classList.contains('active')) {
+            moduleThreeButton.classList.remove('active');
+        }
+
         moduleTwoButton.classList.add('active');
+    }
+});
+
+moduleThreeButton.addEventListener('click', () => {
+    if (moduleThreeTable.style.display !== 'block') {
+        moduleThreeTable.style.display = 'block';
+        moduleOneTable.style.display = 'none';
+        moduleTwoTable.style.display = 'none';
+
+        if (moduleOneButton.classList.contains('active')) {
+            moduleOneButton.classList.remove('active');
+        }
+
+        if (moduleTwoButton.classList.contains('active')) {
+            moduleTwoButton.classList.remove('active');
+        }
+
+        moduleThreeButton.classList.add('active');
     }
 });
 
